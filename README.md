@@ -32,6 +32,20 @@ we fix the mojibake of column 'overview' and 'tagline', 'title' by using the fun
 
 ### Data analysis
 
+there are many unfilled data in training and testing, the most unfilled is keywords, homepage.
+we try to measure the distribution of missing features and the correlation to see if they can use to be a feature.
+
+<!-- we try to visualize the target prediction value, which is revenue. And we find that the distribution of revenue under log1p is more like a normal distribution.
+
+at the same time, we found that there are many outliers and errors, like revenue = 1
+
+we find that the revenue is highly correlated with budget, but there are many movies with 0 budget.
+
+we try to find the frequency of each category in the genres and find that the most common genres is drama, comedy, Drama Romance.
+
+we find that there are many movies with no homepage.
+Most of hte movies use English as their original language, and seems that English -->
+
 ### Feature Engineering
 
 #### string feature to value
@@ -45,37 +59,11 @@ spoken_languages is English?, has homepage?,has tagline?, original_language is E
 we use Bert to convert the string feature ['overview', 'tagline', 'title'] to vector. We use the pretrained model from huggingface. The final model we chose is 'all-mpnet-base-v2'. The output vector is 768 dimension.
 we use both original vector and the vector after linear layer as the new feature.
 
+the method to embed the feature together is add them up, and pass it to the Bert model.
+
 feature dimension:
 original vector: 768
 vector after linear layer: 200, 1
-
-##### developing process
-
-we use BERT to generate contextualized word embeddings. This part embeds the sentences to vector space and do further analysis.
-
-we have try many models to obtain the feature of string.
-    1. all-mpnet-base-v2
-    2. shibing624/text2vec-base-multilingual
-    3. the other models from shibing624
-
-and we finally decided to use the all-mpnet-base-v2 since it may perform better in this dataset.
-
-we try to train the bert model by ourself. But the result is not good since the loss is keeping increasing. This can be caused by the training method.
-
-Since we want to concentrate the information separately and merge them together by linear layer, we also try to embedding tagline, title, overview separately, and pass them to the linear layer and add together to predict the revenue, but the result is not good.
-
-TA provided some ideas, he said we can add the tagline, title, overview together.
-
-at the same time, we want to output the feature vector rather than just a single value, I add a function in the self-define 3 full connection layer that will output the 200-d vector after doing 2 full connection process.
-
-How to measure the performance?
-process:
-    1. embedding the text
-    2. build a 3 layer full connection regressor
-    3. randomly split the data with a 8:2 train test ratio.
-    4. train full connection layer with the data
-    5. calculate the RMSE and correlation coefficient between the predicted revenue with the test revenue.
-    6. draw the TSNE graph to see the distribution of 200-d vector
 
 ## Model Selection
 
