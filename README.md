@@ -48,6 +48,14 @@ Most of hte movies use English as their original language, and seems that Englis
 
 ### Feature Engineering
 
+after we analysis the data, we try to do some feature engineering to the data and use them to train our model.
+
+the process of feature engineering includes:
+string feature -> numerical feature
+string feature -> binary feature
+string feature -> word embedding
+year, week, which day of the week -> numerical feature
+
 #### string feature to value
 
 change the string feature ['genres', 'production_companies', 'production_countries', 'spoken_languages', 'cast', 'crew'] to value, like the number of genres, production_companies, production_countries, cast, crew.
