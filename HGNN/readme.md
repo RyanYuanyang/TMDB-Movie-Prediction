@@ -65,11 +65,11 @@ $$G=Dv^{-\frac{1}{2}}* A* Dv^{-\frac{1}{2}}$$
 ### Graph Convolution
 x: node embeddings (dim: #{movies}×#{features})
 #### 1st layer:
-$$x = fullyconnected(in\_dim, lat\_dim)(x)$$
+$$x = fullyconnected(in-dim, lat-dim)(x)$$
 (note: fullyconected layer's nodes are features, not movies(vertices))
 $$x = G * x$$
 #### 2nd layer:
-$$x = fullyconnected(lat\_dim, out\_dim)(x)$$
+$$x = fullyconnected(lat-dim, out-dim)(x)$$
 (note: fullyconected layer's nodes are features, not movies(vertices))
 $$x = G * x$$
 
@@ -85,7 +85,7 @@ the output will therefore be the concatenation of all batches.
 
 #### training
 $$loss = MSELoss$$
-$$max\_epoch=500$$
+$$max-epoch=500$$
 note that both the budget and revenue are their log values at this stage.
 therefore this is equivalent to using MSLE Loss.
 
