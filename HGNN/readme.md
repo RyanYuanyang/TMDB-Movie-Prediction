@@ -73,7 +73,7 @@ $$x = fullyconnected(latdim, outdim)(x)$$
 (note: fullyconected layer's nodes are features, not movies(vertices))
 $$x = G * x$$
 
-#### process in batchs:
+### process in batchs:
 the approach adopts the idea of transductive learning.
 however, we have ~5000 training data(movies) and ~4400 testing data.
 this makes testing data takes up a large proportion of the whole.
@@ -83,7 +83,7 @@ for example, if n_batch = 4, then each batch will have ~(5000+4400/4) = 6100 dat
 note that only test data are split into batches. train data is the same across batches.
 the output will therefore be the concatenation of all batches.
 
-#### training
+### training
 $$loss = MSELoss$$
 $$maxepoch=500$$
 note that both the budget and revenue are their log values at this stage.
