@@ -109,7 +109,7 @@ score: 1.96185
 HGNN
 Hypergraph Neuron Network
 
-score: 2.38608
+score: 2.38254
 
 ## Result
 
