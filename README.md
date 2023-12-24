@@ -107,6 +107,13 @@ Hypergraph Neuron Network
 
 score: 2.38254
 
+### 6
+Bert
+
+only use tagline + overview + title as the feature, after passing the BERT model, we use linear regression to predict the revenue.
+
+score: 2.81
+
 ## Result
 
 "submission_aggregate.csv"
