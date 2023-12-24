@@ -60,7 +60,7 @@ $$De = degree\ matrix\ of\ hyperedges\ (diagnal)$$
 $$Dv = degree\ matrix\ of\ vertex\ (diagnal)$$
 $$H = incidence\ matrix, \text { where } H_{i,j}=1 \text { if } V[r] \in E[j] \text { else } 0$$
 $$Adj = H*De^{-1}*H^T$$
-$$G=Dv^{-\frac{1}{2}}* A* Dv^{-\frac{1}{2}}$$
+$$G=Dv^{-\frac{1}{2}}* (A+I)* Dv^{-\frac{1}{2}}$$
 
 ### Graph Convolution
 x: node embeddings (dim: #{movies}×#{features})
