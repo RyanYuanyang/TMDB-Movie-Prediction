@@ -54,8 +54,8 @@ for crew, the frequency of each crew SomeCrew's single appearance is no longer 1
 After above raw construction all done, filter HyperEdges whose degree not in (10, 2000).
 
 ### Adjacency matrix
-$$V = {all\_movies}$$
-$$E = {all\_hyperedges}$$
+$$V = {allmovies}$$
+$$E = {allhyperedges}$$
 $$De = degree\ matrix\ of\ hyperedges\ (diagnal)$$
 $$Dv = degree\ matrix\ of\ vertex\ (diagnal)$$
 $$H = incidence\ matrix, \text { where } H_{i,j}=1 \text { if } V[r] \in E[j] \text { else } 0$$
@@ -65,11 +65,11 @@ $$G=Dv^{-\frac{1}{2}}* A* Dv^{-\frac{1}{2}}$$
 ### Graph Convolution
 x: node embeddings (dim: #{movies}×#{features})
 #### 1st layer:
-$$x = fullyconnected(in-dim, lat-dim)(x)$$
+$$x = fullyconnected(indim, latdim)(x)$$
 (note: fullyconected layer's nodes are features, not movies(vertices))
 $$x = G * x$$
 #### 2nd layer:
-$$x = fullyconnected(lat-dim, out-dim)(x)$$
+$$x = fullyconnected(latdim, outdim)(x)$$
 (note: fullyconected layer's nodes are features, not movies(vertices))
 $$x = G * x$$
 
@@ -85,7 +85,7 @@ the output will therefore be the concatenation of all batches.
 
 #### training
 $$loss = MSELoss$$
-$$max-epoch=500$$
+$$maxepoch=500$$
 note that both the budget and revenue are their log values at this stage.
 therefore this is equivalent to using MSLE Loss.
 
