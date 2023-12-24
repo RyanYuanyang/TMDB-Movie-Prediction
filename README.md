@@ -80,12 +80,23 @@ process:
 ## Model Selection
 
 ### 1
+Linear Regression Model
+score: 2.0167
 
 ### 2
+Random Forest Model
+score: 2.22765
 
 ### 3
+Error Detection Model
+use lightgbm as the error identifer and use lightgbm, xgboost, catboost as the regressor. The error identifier will identify the error data and non-error data. And there will be two regressor. One regressor will train on the error data and the other regressor will train on the non-error data. The final result will be the sum of the two regressor.
+score: 2.16366
+
 
 ### 4
+Aggregation Model
+use a linear combination of the result of the three model above to achieve the final result.
+score: 1.96185
 
 ## Result
 
