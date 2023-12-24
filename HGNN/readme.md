@@ -60,7 +60,7 @@ $$De = degree\ matrix\ of\ hyperedges\ (diagnal)$$
 $$Dv = degree\ matrix\ of\ vertex\ (diagnal)$$
 $$H = incidence\ matrix, \text { where } H_{i,j}=1 \text { if } V[r] \in E[j] \text { else } 0$$
 $$Adj = H*De^{-1}*H^T$$
-$$G=Dv^{-\frac{1}{2}}* A* Dv^{-\frac{1}{2}}$$
+$$G=Dv^{-\frac{1}{2}}* (A+I)* Dv^{-\frac{1}{2}}$$
 
 ### Graph Convolution
 x: node embeddings (dim: #{movies}×#{features})
@@ -105,5 +105,7 @@ very time-consuming
 
 ## kaggle score
 
-the best score is 2.53
+the best score is 2.53 with above hyperparam-tuning, but reached 2.386 when using only one conv layer and out_dim=100 (before channel fusing)
 ![Alt text](image.png)
+![image](https://github.com/RyanYuanyang/TMDB-Movie-Prediction/assets/95773741/1f746e9f-0a84-46de-80b7-698c4304f8a9)
+
