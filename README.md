@@ -104,6 +104,13 @@ use a linear combination of the result of the three model above to achieve the f
 
 score: 1.96185
 
+
+### 5
+HGNN
+Hypergraph Neuron Network
+
+score: 2.38608
+
 ## Result
 
 "submission_aggregate.csv"
