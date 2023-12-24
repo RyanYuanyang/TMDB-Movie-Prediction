@@ -77,15 +77,24 @@ vector after linear layer: 200, 1
 
 ### 1
 Linear Regression Model
+The model is not quite stable, results varies from 2.099 to 2.017.
 
 score: 2.0167
 
 ### 2
 Random Forest Model
+The model is tuned with different parameters, n_etimaters (50~1000), min_samples_split (2~100), max_depth (10~200).
 
 score: 2.22765
 
 ### 3
+Catboost Model
+
+Use single catboost model, with high complexity parameters and additional corrected test budget values.
+
+score: 2.14714
+
+### 4
 Error Detection Model
 
 use lightgbm as the error identifer and use lightgbm, xgboost, catboost as the regressor. The error identifier will identify the error data and non-error data. And there will be two regressor. One regressor will train on the error data and the other regressor will train on the non-error data. The final result will be the sum of the two regressor.
@@ -93,7 +102,7 @@ use lightgbm as the error identifer and use lightgbm, xgboost, catboost as the r
 score: 2.16366
 
 
-### 4
+### 5
 Aggregation Model
 
 use a linear combination of the result of the three model above to achieve the final result.
@@ -101,13 +110,13 @@ use a linear combination of the result of the three model above to achieve the f
 score: 1.96185
 
 
-### 5
+### 6
 HGNN
 Hypergraph Neuron Network
 
 score: 2.38254
 
-### 6
+### 7
 Bert
 
 only use tagline + overview + title as the feature, after passing the BERT model, we use linear regression to predict the revenue.
