@@ -83,7 +83,7 @@ score: 2.0167
 
 ### 2
 Random Forest Model
-The model is tuned with different parameters, n_etimaters (50~1000), min_samples_split (2~100), max_depth (10~200).
+The model is tuned with different parameters, n_etimaters (50 - 1000), min_samples_split (2 - 100), max_depth (10 - 200).
 
 score: 2.22765
 
