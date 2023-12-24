@@ -105,7 +105,8 @@ very time-consuming
 
 ## kaggle score
 
-the best score is 2.53 with above hyperparam-tuning, but reached 2.386 when using only one conv layer and out_dim=100, n_epoch=5000 (before channel fusing)
+the best score is 2.53 with above hyperparam-tuning, but reached 2.382 when using only one conv layer and out_dim=300, n_epoch=5000 (before channel fusing)
 ![Alt text](image.png)
-![image](https://github.com/RyanYuanyang/TMDB-Movie-Prediction/assets/95773741/1f746e9f-0a84-46de-80b7-698c4304f8a9)
+![image](https://github.com/RyanYuanyang/TMDB-Movie-Prediction/assets/95773741/f6836cb3-0ee1-4078-822a-668384fcb855)
+
 
