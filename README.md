@@ -8,7 +8,7 @@ Zhao jieyi  3035844390
 Fan Zheyu 3035845203   
 Tu Yuanyang  
 He jiangchuan 3035771945  
-Jonathan Cheung  
+Cheung Yau Shing Jonathan 3035783560  
 
 ## Project Description
 
