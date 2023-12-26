@@ -3,12 +3,12 @@
 FITE3010 group project
 
 Name:
-Chen Yuxuan 3035928455
-Zhao jieyi
-Fan Zheyu
-Tu Yuanyang
-He jiangchuan
-Jonathan Cheung
+Chen Yuxuan 3035928455  
+Zhao jieyi  
+Fan Zheyu  
+Tu Yuanyang  
+He jiangchuan  
+Jonathan Cheung  
 
 ## Project Description
 
