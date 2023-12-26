@@ -111,8 +111,8 @@ score: 1.96185
 
 
 ### 6
-HGNN
 Hypergraph Neuron Network
+Used a 6-channel HGNN, utilizing the "json-formatted" columns (which is ignored by most of the other groups and most of the public notebooks on kaggle website) of the data to mine the possible latent "relationship/closeness" of movies. 
 
 score: 2.38254
 
