@@ -7,7 +7,7 @@ Chen Yuxuan 3035928455
 Zhao jieyi  3035844390 
 Fan Zheyu 3035845203  
 Tu Yuanyang  
-He jiangchuan  
+He jiangchuan 3035771945
 Jonathan Cheung  
 
 ## Project Description
