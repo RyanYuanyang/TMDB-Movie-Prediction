@@ -16,6 +16,26 @@ He jiangchuan 3035771945
 
 Cheung Yau Shing Jonathan 3035783560  
 
+## Environment
+
+Python 3.8.16
+
+**data analysis**:
+pandas, numpy, matplotlib, seaborn, wordcloud, scipy
+**model**:
+sklearn, lightgbm, xgboost, catboost, text2vec, transformer,pytorch
+**other lib**:
+tqdm
+
+## Running order
+
+1. DataAnalysis.ipynb
+2. FeatureEngineering.ipynb
+3. Models
+    - Model.ipynb
+    - sentence_embedding.ipynb
+    - HGNN
+
 ## Project Description
 
 This project is to predict the revenue of movies based on the data from TMDB. The dataset is from Kaggle. The dataset contains 3000+ movies with 23 features. The features include budget, genres, homepage, id, keywords, original_language, original_title, overview, popularity, production_companies, production_countries, release_date, revenue, runtime, spoken_languages, status, tagline, title, vote_average, vote_count, cast, crew. The target is to predict the revenue of movies.
@@ -129,6 +149,15 @@ only use tagline + overview + title as the feature, after passing the BERT model
 
 score: 2.81
 
+running method:
+download the model from huggingface: website: <https://huggingface.co/sentence-transformers/all-mpnet-base-v2>
+and put the model in the folder: TMDB-Movie-Prediction\sentence_embedding\
+the full path is: TMDB-Movie-Prediction\sentence_embedding\all-mpnet-base-v2
+
+then run the sentence_embedding.ipynb, the output features and prediction result will be in the folder: TMDB-Movie-Prediction\sentence_embedding\
+
+the file 'one_dim_feature_test.csv' is the output result of the model, original_pred column is the predicted revenue.
+
 ## Result
 
 "submission_aggregate.csv"
@@ -136,3 +165,13 @@ score: 2.81
 score: 1.96185
 
 ## Conclusion
+
+The given data is very complicated, and there are many missing data. We try to use different method to separate the feature from the data and use them to train the model. Above are the result of the model we tried.
+
+since Bert only use the string as the feature and does not use any numerical and categorical feature, the result is not good.We have also try the Bert model and outputt the feature, the result is also not good. we think that it is because the large dimension of the feature cause the model overfitting. At the same time, we have also tried to use the single dimension feature (log revenue), the model we train always give a large weight to it which cause the result has a large error.
+
+HGNN will use the json feature and the result is better than Bert, but the result is not good enough.
+
+since we find that the catboost, xgboost, lightgbm model output similar result (around 2.1), we think that combine them together will get a better result. And the result is better than the single model.
+
+Finally, we decided to use the aggregation model as our final model and combine them by linear combination.
