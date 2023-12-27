@@ -107,20 +107,20 @@ vector after linear layer: 200, 1
 Linear Regression Model
 The model is not quite stable, results varies from 2.099 to 2.017.
 
-score: 2.08398
+score: 2.0652
 
 ### 2
 Random Forest Model
 The model is tuned with different parameters, n_etimaters (50 - 1000), min_samples_split (2 - 100), max_depth (10 - 200).
 
-score: 2.09333
+score: 2.14405
 
 ### 3
 Error Detection Model
 
 use lightgbm as the error identifer and use lightgbm, xgboost, catboost as the regressor. The error identifier will identify the error data and non-error data. And there will be two regressor. One regressor will train on the error data and the other regressor will train on the non-error data. The final result will be the sum of the two regressor.
 
-score: 2.09191
+score: 2.07727
 
 
 ### 4
@@ -128,7 +128,7 @@ Aggregation Model
 
 use a linear combination of the result of the three model above to achieve the final result.
 
-score: 1.94096
+score: 1.92684
 
 
 ### 5
@@ -159,7 +159,7 @@ test result: this feature will cause overfitting, should not use it
 
 "submission_aggregate.csv"
 
-score: 1.94096
+score: 1.92684
 
 ## Conclusion
 
