@@ -153,6 +153,8 @@ then run the sentence_embedding.ipynb, the output features and prediction result
 
 the file 'one_dim_feature_test.csv' is the output result of the model, original_pred column is the predicted revenue.
 
+test result: this feature will cause overfitting, should not use it
+
 ## Result
 
 "submission_aggregate.csv"
