@@ -21,11 +21,13 @@ Cheung Yau Shing Jonathan 3035783560
 Python 3.8.16
 
 **data analysis**:
-pandas, numpy, matplotlib, seaborn, wordcloud, scipy
+- pandas, numpy, matplotlib, seaborn, wordcloud, scipy
+  
 **model**:
-sklearn, lightgbm, xgboost, catboost, text2vec, transformer,pytorch
+- sklearn, lightgbm, xgboost, catboost, text2vec, transformer,pytorch
+  
 **other lib**:
-tqdm
+- tqdm
 
 ## Running order
 
