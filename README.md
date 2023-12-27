@@ -3,33 +3,12 @@
 FITE3010 group project
 
 Name:  
-Chen Yuxuan 3035928455\
-Zhao jieyi  3035844390\
-Fan Zheyu 3035845203\
-Tu Yuanyang\
-He jiangchuan 3035771945\
-Jonathan Cheung 3035783560
-
-## Environment
-
-Python 3.8.16
-
-**data analysis**:
-pandas, numpy, matplotlib, seaborn, wordcloud, scipy
-**model**:
-sklearn, lightgbm, xgboost, catboost, text2vec, transformer,pytorch
-**other lib**:
-tqdm
-
-## Running order
-
-1. DataAnalysis.ipynb
-2. FeatureEngineering.ipynb
-
-3. Models
-    - Model.ipynb
-    - sentence_embedding.ipynb
-    - HGNN
+Chen Yuxuan 3035928455  
+Zhao jieyi 3035844390
+Fan Zheyu 3035845203  
+Tu Yuanyang 3035832476
+He jiangchuan 3035771945  
+Cheung Yau Shing Jonathan 3035783560  
 
 ## Project Description
 
